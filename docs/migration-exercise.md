@@ -126,3 +126,10 @@ curl -X POST https://admin.hlx.page/config/{org}/sites/{site}/headers.json \
 - Go to https://labs.aem.live/tools/user-admin/index.html
 - Add a new user to your org with the role `config_admin`
 
+## Step 8: Add a redirect
+- Create a sheet in the content root called `redirects`
+- Add 2 columns: `source` and `destination`
+- Add a redirect for `/news` to redirect to `/blog`
+
+_Note: These paths should be relative and not the FQDN_
+
