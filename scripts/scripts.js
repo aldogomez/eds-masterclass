@@ -63,17 +63,17 @@ function buildBlogHeaderBlock(main) {
   const date = getMetadata('date');
   const author = getMetadata('author');
   const tags = getMetadata('article:tag');
-  
+
   // Only build blog header if we have blog metadata
   if (!date && !author && !tags) return;
-  
+
   const h1 = main.querySelector('h1');
   if (!h1) return;
-  
+
   // Build the blog header block structure
   const cells = [date || '', author || '', tags || ''];
   const blogHeader = buildBlock('blog-header', [cells]);
-  
+
   // Insert right after H1
   h1.parentElement.insertBefore(blogHeader, h1.nextSibling);
 }
